@@ -62,7 +62,37 @@ enum TechnicalFunctions {
   apo="APO",
   ppo="PPO",
   mom="MOM",
-
+  bop="BOP",
+  cci="CCI",
+  cmo="CMO",
+  roc="ROC",
+  rocr="ROCR",
+  aroon="AROON",
+  aroonosc="AROONOSC",
+  mfi="MFI",
+  trix="TRIX",
+  ultosc="ULTOSC",
+  dx="DX",
+  minusDI="MINUS_DI",
+  plusDI="PLUS_DI",
+  minusDM="MINUS_DM",
+  plusDM="PLUS_DM",
+  bbands="BBANDS",
+  midpoint="MIDPOINT",
+  midprice="MIDPRICE",
+  sar="SAR",
+  trange="TRANGE",
+  atr="ATR",
+  natr="NATR",
+  ad="AD",
+  adosc="ADOSC",
+  obv="OBV",
+  htTrendline="HT_TRENDLINE",
+  htSine="HT_SINE",
+  htTrendmode="HT_TRENDMODE",
+  htDCperiod='HT_DCPERIOD',
+  htDCphase="HT_DCPHASE",
+  htPhasor="HT_PHASOR",
 }
 
 export const FUNCTIONS = {
@@ -70,6 +100,7 @@ export const FUNCTIONS = {
   ...CurrencyFunctions,
   ...FundamentalFunctions,
   ...TimeSeriesFunctions,
+  ...TechnicalFunctions
 };
 
 export default {
