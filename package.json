@@ -1,0 +1,18 @@
+{
+  "name": "alphavantage-js",
+  "version": "1.0.0",
+  "description": "A JavaScript SDK for the AlphaVantage API",
+  "main": "index.ts",
+  "repository": "git@github.com:zrichardson8039/alphavantage-js.git",
+  "author": "Zach Richardson <zach.richardson@willowtreeapps.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@types/node": "^15.6.0",
+    "axios": "^0.21.1",
+    "typescript": "^4.2.4"
+  },
+  "devDependencies": {
+    "ts-node": "^9.1.1"
+  }
+}
