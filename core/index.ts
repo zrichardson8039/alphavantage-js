@@ -1,8 +1,8 @@
 import axios from "axios";
 import { URL } from "./constants";
-import { IIntradayQuote, IQuote } from "./interfaces";
+import { IIntradayQuote, IQuote, IRequest } from "./interfaces";
 
-export function fetchAPI<T>(params: T) {
+export function fetchAPI<IRequest> (params: IRequest) {
   return axios.get(URL.query, params);
 }
 

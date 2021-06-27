@@ -1,8 +1,11 @@
-export interface IQuote {
-    function: string;
-    symbol: string;
+export interface IRequest {
+  function: string;
+  symbol: string;
+  apikey: string;
+}
+
+export interface IQuote extends IRequest {
     market: string;
-    apikey: string;
 }
 
 export interface IIntradayQuote extends IQuote {
