@@ -95,14 +95,10 @@ enum TechnicalFunctions {
   htPhasor="HT_PHASOR",
 }
 
-export const FUNCTIONS = {
+export default {
   ...GlobalFunctions,
   ...CurrencyFunctions,
   ...FundamentalFunctions,
   ...TimeSeriesFunctions,
   ...TechnicalFunctions
-};
-
-export default {
-  FUNCTIONS
 };

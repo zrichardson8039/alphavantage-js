@@ -10,5 +10,3 @@ export interface ICryptoRating {
     symbol: string;
     apikey: string;
 }
-
-

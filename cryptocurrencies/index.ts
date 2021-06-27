@@ -1,25 +1,26 @@
 import { fetchAPI, fetchIntradayQuote, fetchQuote } from "../core";
-import { FUNCTIONS } from "../core/enums";
+import FUNCTIONS from "../core/enums";
 import { ICurrencyExchangeRate, ICryptoRating } from "./interfaces";
 
-const currencyExchangeRate = (params: ICurrencyExchangeRate) =>
+export const currencyExchangeRate = (params: ICurrencyExchangeRate) =>
   fetchAPI<ICurrencyExchangeRate>(params);
 
-const cryptoRating = (params: ICryptoRating) => fetchAPI<ICryptoRating>(params);
+export const cryptoRating = (params: ICryptoRating) =>
+  fetchAPI<ICryptoRating>(params);
 
-const cryptoIntraday = (params) =>
+export const cryptoIntraday = (params) =>
   fetchIntradayQuote({
     ...params,
-    function: FUNCTIONS.currencyExchangeRate,
+    function: FUNCTIONS.cryptoIntraday,
   });
 
-const digitalCurrencyDaily = (params) =>
+export const digitalCurrencyDaily = (params) =>
   fetchQuote({ ...params, function: FUNCTIONS.digitalCurrencyDaily });
 
-const digitalCurrencyWeekly = (params) =>
+export const digitalCurrencyWeekly = (params) =>
   fetchQuote({ ...params, function: FUNCTIONS.digitalCurrencyWeekly });
 
-const digitalCurrencyMonthly = (params) =>
+export const digitalCurrencyMonthly = (params) =>
   fetchQuote({ ...params, function: FUNCTIONS.digitalCurrencyMonthly });
 
 export default {
