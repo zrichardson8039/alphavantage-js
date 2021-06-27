@@ -1,9 +1,9 @@
-enum GlobalFunctions {
+export enum GlobalFunctions {
   globalQuote="GLOBAL_QUOTE",
   symbolSearch="SYMBOL_SEARCH",
 }
 
-enum CurrencyFunctions {
+export enum CurrencyFunctions {
   currencyExchangeRate="CURRENCY_EXCHANGE_RATE",
   cryptoRating="CRYPTO_RATING",
   cryptoIntraday="CRYPTO_INTRADAY",
@@ -16,7 +16,7 @@ enum CurrencyFunctions {
   fxMonthly="FX_MONTHLY",
 }
 
-enum FundamentalFunctions {
+export enum FundamentalFunctions {
   overview="OVERVIEW",
   earnings="EARNINGS",
   incomeStatement="INCOME_STATEMENT",
@@ -28,7 +28,7 @@ enum FundamentalFunctions {
 
 }
 
-enum TimeSeriesFunctions {
+export enum TimeSeriesFunctions {
   timeSeriesIntraday="TIME_SERIES_INTRADAY",
   timeSeriesIntradayExtended="TIME_SERIES_INTRADAY_EXTENDED",
   timeSeriesDaily="TIME_SERIES_DAILY",
@@ -39,7 +39,7 @@ enum TimeSeriesFunctions {
   timeSeriesMonthlyAdjusted="TIME_SERIES_MONTHLY_ADJUSTED",
 }
 
-enum TechnicalFunctions {
+export enum TechnicalFunctions {
   sma="SMA",
   ema="EMA",
   wma="WMA",

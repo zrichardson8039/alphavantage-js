@@ -1,53 +1,55 @@
-/*-- CORE --*/
+import { CurrencyFunctions } from "../core/enums";
 import { fetchAPI, fetchIntradayQuote, fetchQuote } from "../core";
-import FUNCTIONS from "../core/enums";
-import { IRequest } from "../core/interfaces";
-
-/*-- CRYPTOCURRENCY --*/
-import { ICurrencyExchangeRate } from "./interfaces";
+import { ICurrencyExchangeRate, IRequest } from "../core/interfaces";
 
 
 // CURRENCY_EXCHANGE_RATE
-export const currencyExchangeRate = (params: ICurrencyExchangeRate) =>
-  fetchAPI(params);
+export const exchangeRate = (params: ICurrencyExchangeRate) =>
+  fetchAPI({
+    ...params,
+    function: CurrencyFunctions.currencyExchangeRate
+  });
 
 // CRYPTO_RATING
-export const cryptoRating = (params: IRequest) =>
-  fetchAPI(params);
+export const rating = (params: IRequest) =>
+  fetchAPI({
+    ...params,
+    function: CurrencyFunctions.cryptoRating
+  });
 
 // CRYPTO_INTRADAY
-export const cryptoIntraday = (params) =>
+export const intraday = (params) =>
   fetchIntradayQuote({
     ...params,
-    function: FUNCTIONS.cryptoIntraday,
+    function: CurrencyFunctions.cryptoIntraday,
   });
 
 // DIGITAL_CURRENCY_DAILY
-export const digitalCurrencyDaily = (params) =>
-  fetchQuote({ 
+export const daily = (params) =>
+  fetchQuote({
     ...params,
-    function: FUNCTIONS.digitalCurrencyDaily
+    function: CurrencyFunctions.digitalCurrencyDaily
   });
 
 // DIGITAL_CURRENCY_WEEKLY
-export const digitalCurrencyWeekly = (params) =>
+export const weekly = (params) =>
   fetchQuote({
     ...params,
-    function: FUNCTIONS.digitalCurrencyWeekly
+    function: CurrencyFunctions.digitalCurrencyWeekly
   });
 
 // DIGITAL_CURRENCY_MONTHLY
-export const digitalCurrencyMonthly = (params) =>
+export const monthly = (params) =>
   fetchQuote({
     ...params,
-    function: FUNCTIONS.digitalCurrencyMonthly
+    function: CurrencyFunctions.digitalCurrencyMonthly
   });
 
 export default {
-  currencyExchangeRate,
-  cryptoRating,
-  cryptoIntraday,
-  digitalCurrencyDaily,
-  digitalCurrencyWeekly,
-  digitalCurrencyMonthly,
+  exchangeRate,
+  rating,
+  intraday,
+  daily,
+  weekly,
+  monthly,
 };

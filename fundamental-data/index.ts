@@ -1,11 +1,10 @@
-/*-- CORE --*/
-import { fetchAPI } from "../core";
 import FUNCTIONS from "../core/enums";
+import { fetchAPI } from "../core";
 import { IRequest } from "../core/interfaces";
 
 
 // COMPANY_OVERVIEW
-export const companyOverview = (params: IRequest) =>
+export const overview = (params: IRequest) =>
   fetchAPI({
     ...params,
     function: FUNCTIONS.overview
@@ -61,7 +60,7 @@ export const ipoCalendar = (params: IRequest) =>
   });
 
 export default {
-  companyOverview,
+  overview,
   earnings,
   incomeStatement,
   balanceSheet,

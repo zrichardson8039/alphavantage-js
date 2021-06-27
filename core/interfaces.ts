@@ -10,6 +10,14 @@ export interface IQuote extends IRequest {
 
 export interface IIntradayQuote extends IQuote {
     interval: string;
+    slice?: string;
     outputsize?: string;
     datatype?: JSON;
+}
+
+export interface ICurrencyExchangeRate {
+  function: string;
+  from_currency: string;
+  to_currency: string;
+  apikey: string;
 }
