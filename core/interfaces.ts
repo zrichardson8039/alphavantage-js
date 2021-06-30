@@ -15,6 +15,12 @@ export interface IIntradayQuote extends IQuote {
     datatype?: JSON;
 }
 
+export interface ITechnical extends IRequest {
+  interval: string;
+  time_period: number;
+  series_type: string;
+}
+
 export interface ICurrencyExchangeRate {
   function: string;
   from_currency: string;
