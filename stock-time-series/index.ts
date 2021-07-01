@@ -1,61 +1,54 @@
 import { fetchIntradayQuote, fetchQuote } from "../core";
-import { TimeSeriesFunctions } from "../core/enums";
-import { IIntradayQuote, IQuote, IRequest } from "../core/interfaces";
+import { IIntradayQuote, IQuote } from "../core/interfaces";
+import { TimeSeriesFunctions } from "./enums";
 
-// INTRADAY
+
 export const intraday = (params: IIntradayQuote) =>
   fetchIntradayQuote({
     ...params,
-    function: TimeSeriesFunctions.timeSeriesIntraday
+    function: TimeSeriesFunctions.intraday
   });
 
-// INTRADAY_EXTENDED
 export const intradayExtended = (params: IIntradayQuote) =>
   fetchIntradayQuote({
     ...params,
-    function: TimeSeriesFunctions.timeSeriesIntraday
+    function: TimeSeriesFunctions.intradayExtended
   });
 
-// DAILY
 export const daily = (params: IQuote) =>
   fetchQuote({
     ...params,
-    function: TimeSeriesFunctions.timeSeriesDaily
+    function: TimeSeriesFunctions.daily
   });
 
-// DAILY_ADJUSTED
 export const dailyAdjusted = (params: IQuote) =>
   fetchQuote({
     ...params,
-    function: TimeSeriesFunctions.timeSeriesDailyAdjusted
+    function: TimeSeriesFunctions.dailyAdjusted
   });
 
-// WEEKLY
 export const weekly = (params: IQuote) =>
   fetchQuote({
     ...params,
-    function: TimeSeriesFunctions.timeSeriesWeekly
+    function: TimeSeriesFunctions.weekly
   });
 
-// WEEKLY_ADJUSTED
 export const weeklyAdjusted = (params: IQuote) =>
   fetchQuote({
     ...params,
-    function: TimeSeriesFunctions.timeSeriesWeeklyAdjusted
+    function: TimeSeriesFunctions.weeklyAdjusted
   });
 
-// MONTHLY
 export const monthly = (params: IQuote) =>
   fetchQuote({
     ...params,
-    function: TimeSeriesFunctions.timeSeriesMonthly
+    function: TimeSeriesFunctions.monthly
   });
 
-// MONTHLY_ADJUSTED
 export const monthlyAdjusted = (params: IQuote) =>
   fetchQuote({
     ...params,
-    function: TimeSeriesFunctions.timeSeriesMonthlyAdjusted
+    function: TimeSeriesFunctions.monthlyAdjusted
   });
 
 export default {

@@ -1,13 +1,12 @@
-import { DataType, Interval, OutputSize } from "./enums";
+import { DataType, Interval, OutputSize, SeriesType, Slice } from "./enums";
 
 export interface IRequest {
   function: string;
-  symbol: string;
+  symbol?: string;
   apikey: string;
 }
 
 export interface IQuote extends IRequest {
-  market?: string;
   outputsize?: OutputSize;
   datatype?: DataType;
 }
@@ -15,19 +14,12 @@ export interface IQuote extends IRequest {
 export interface IIntradayQuote extends IQuote {
   adjusted?: boolean;
   interval: Interval;
-  slice?: string;
+  slice?: Slice;
 }
 
 export interface ITechnical extends IRequest {
   datatype?: DataType;
   interval: Interval;
-  time_period: number;
-  series_type: string;
-}
-
-export interface ICurrencyExchangeRate {
-  function: string;
-  from_currency: string;
-  to_currency: string;
-  apikey: string;
+  time_period?: number;
+  series_type?: SeriesType;
 }

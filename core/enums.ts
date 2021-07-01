@@ -4,11 +4,11 @@ export enum GlobalFunctions {
 }
 
 export enum Interval {
-  one = "1min",
-  five = "5min",
-  fifteen = "15min",
-  thirty = "30min",
-  sixty = "60min",
+  oneMin = "1min",
+  fiveMin = "5min",
+  fifteenMin = "15min",
+  thirtyMin = "30min",
+  sixtyMin = "60min",
   daily = "daily",
   weekly = "weekly",
   monthly = "monthly",
@@ -31,9 +31,29 @@ export enum OutputSize {
   full = "full",
 }
 
-export default {
-  ...GlobalFunctions,
-  ...FundamentalFunctions,
-  ...TimeSeriesFunctions,
-  ...TechnicalFunctions
-};
+export enum Slice {
+  yearOneMonthOne = 'year1month1',
+  yearOneMonthTwo = 'year1month2',
+  yearOneMonthThree = 'year1month3',
+  yearOneMonthFour = 'year1month4',
+  yearOneMonthFive = 'year1month5',
+  yearOneMonthSix = 'year1month6',
+  yearOneMonthSeven = 'year1month7',
+  yearOneMonthEight = 'year1month8',
+  yearOneMonthNine = 'year1month9',
+  yearOneMonthTen = 'year1month10',
+  yearOneMonthEleven = 'year1month11',
+  yearOneMonthTwelve = 'year1month12',
+  yearTwoMonthOne = 'year2month1',
+  yearTwoMonthTwo = 'year2month2',
+  yearTwoMonthThree = 'year2month3',
+  yearTwoMonthFour = 'year2month4',
+  yearTwoMonthFive = 'year2month5',
+  yearTwoMonthSix = 'year2month6',
+  yearTwoMonthSeven = 'year2month7',
+  yearTwoMonthEight = 'year2month8',
+  yearTwoMonthNine = 'year2month9',
+  yearTwoMonthTen = 'year2month10',
+  yearTwoMonthEleven = 'year2month11',
+  yearTwoMonthTwelve = 'year2month12',
+}

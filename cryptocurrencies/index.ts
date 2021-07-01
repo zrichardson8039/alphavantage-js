@@ -1,48 +1,43 @@
 import { fetchAPI, fetchIntradayQuote, fetchQuote } from "../core";
-import { ICurrencyExchangeRate, IIntradayQuote, IQuote, IRequest } from "../core/interfaces";
+import { IRequest } from "../core/interfaces";
 import { CryptoFunctions } from "./enums";
+import { ICryptoExchangeRate, ICryptoIntraday, ICryptoQuote } from "./interfaces";
 
 
-// CURRENCY_EXCHANGE_RATE
-export const exchangeRate = (params: ICurrencyExchangeRate) =>
+export const exchangeRate = (params: ICryptoExchangeRate) =>
   fetchAPI({
     ...params,
-    function: CryptoFunctions.cryptoExchangeRate
+    function: CryptoFunctions.exchangeRate
   });
 
-// CRYPTO_RATING
 export const rating = (params: IRequest) =>
   fetchAPI({
     ...params,
-    function: CryptoFunctions.cryptoRating
+    function: CryptoFunctions.rating
   });
 
-// CRYPTO_INTRADAY
-export const intraday = (params: IIntradayQuote) =>
+export const intraday = (params: ICryptoIntraday) =>
   fetchIntradayQuote({
     ...params,
-    function: CryptoFunctions.cryptoIntraday,
+    function: CryptoFunctions.intraday,
   });
 
-// DIGITAL_CURRENCY_DAILY
-export const daily = (params: IQuote) =>
+export const daily = (params: ICryptoQuote) =>
   fetchQuote({
     ...params,
-    function: CryptoFunctions.cryptoDaily
+    function: CryptoFunctions.daily
   });
 
-// DIGITAL_CURRENCY_WEEKLY
-export const weekly = (params: IQuote) =>
+export const weekly = (params: ICryptoQuote) =>
   fetchQuote({
     ...params,
-    function: CryptoFunctions.cryptoWeekly
+    function: CryptoFunctions.weekly
   });
 
-// DIGITAL_CURRENCY_MONTHLY
-export const monthly = (params: IQuote) =>
+export const monthly = (params: ICryptoQuote) =>
   fetchQuote({
     ...params,
-    function: CryptoFunctions.cryptoMonthly
+    function: CryptoFunctions.monthly
   });
 
 export default {

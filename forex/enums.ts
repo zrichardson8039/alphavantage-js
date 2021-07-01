@@ -1,7 +1,7 @@
-export enum CurrencyFunctions {
-  fxExchangeRate="CURRENCY_EXCHANGE_RATE",
-  fxIntraday="FX_INTRADAY",
-  fxDaily="FX_DAILY",
-  fxWeekly="FX_WEEKLY",
-  fxMonthly="FX_MONTHLY",
+export enum ForexFunctions {
+  exchangeRate="CURRENCY_EXCHANGE_RATE",
+  intraday="FX_INTRADAY",
+  daily="FX_DAILY",
+  weekly="FX_WEEKLY",
+  monthly="FX_MONTHLY",
 }

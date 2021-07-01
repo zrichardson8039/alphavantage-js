@@ -1,62 +1,54 @@
-import FUNCTIONS from "../core/enums";
 import { fetchAPI } from "../core";
 import { IRequest } from "../core/interfaces";
+import { FundamentalFunctions } from "./enums";
 
 
-// COMPANY_OVERVIEW
 export const overview = (params: IRequest) =>
   fetchAPI({
     ...params,
-    function: FUNCTIONS.overview
+    function: FundamentalFunctions.overview
   });
 
-// EARNINGS
 export const earnings = (params: IRequest) =>
   fetchAPI({
     ...params,
-    function: FUNCTIONS.earnings
+    function: FundamentalFunctions.earnings
   });
 
-// INCOME_STATEMENT
 export const incomeStatement = (params: IRequest) =>
   fetchAPI({
     ...params,
-    function: FUNCTIONS.incomeStatement
+    function: FundamentalFunctions.incomeStatement
   });
 
-// BALANCE_SHEET
 export const balanceSheet = (params: IRequest) =>
   fetchAPI({
     ...params,
-    function: FUNCTIONS.balanceSheet
+    function: FundamentalFunctions.balanceSheet
   });
 
-// CASH_FLOW
 export const cashFlow = (params: IRequest) =>
   fetchAPI({
     ...params,
-    function: FUNCTIONS.cashFlow,
+    function: FundamentalFunctions.cashFlow,
   });
 
-// LISTING & DELISTING STATUS
 export const listingStatus = (params: IRequest) =>
   fetchAPI({
     ...params,
-    function: FUNCTIONS.listingStatus
+    function: FundamentalFunctions.listingStatus
   });
 
-// EARNINGS_CALENDAR
 export const earningsCalendar = (params: IRequest) =>
   fetchAPI({
     ...params,
-    function: FUNCTIONS.earningsCalendar
+    function: FundamentalFunctions.earningsCalendar
   })
 
-// IPO_CALENDAR
 export const ipoCalendar = (params: IRequest) =>
   fetchAPI({
     ...params,
-    function: FUNCTIONS.ipoCalendar
+    function: FundamentalFunctions.ipoCalendar
   });
 
 export default {

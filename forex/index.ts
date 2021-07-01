@@ -1,40 +1,36 @@
 import { fetchAPI, fetchIntradayQuote, fetchQuote } from "../core";
-import { ICurrencyExchangeRate, IIntradayQuote, IQuote } from "../core/interfaces";
-import { CurrencyFunctions } from "./enums";
+import { ForexFunctions } from "./enums";
+import { IForexExchangeRate, IForexIntraday, IForexQuote } from "./interfaces";
 
-// CURRENCY_EXCHANGE_RATE
-export const exchangeRate = (params: ICurrencyExchangeRate) =>
+
+export const exchangeRate = (params: IForexExchangeRate) =>
   fetchAPI({
     ...params,
-    function: CurrencyFunctions.fxExchangeRate
+    function: ForexFunctions.exchangeRate
   });
 
-// FX_INTRADAY
-export const intraday = (params: IIntradayQuote) =>
+export const intraday = (params: IForexIntraday) =>
   fetchIntradayQuote({
     ...params,
-    function: CurrencyFunctions.fxIntraday,
+    function: ForexFunctions.intraday,
   });
 
-// FX_DAILY
-export const daily = (params: IQuote) =>
+export const daily = (params: IForexQuote) =>
   fetchQuote({
     ...params,
-    function: CurrencyFunctions.fxDaily
+    function: ForexFunctions.daily
   });
 
-// FX_WEEKLY
-export const weekly = (params: IQuote) =>
+export const weekly = (params: IForexQuote) =>
   fetchQuote({
     ...params,
-    function: CurrencyFunctions.fxWeekly
+    function: ForexFunctions.weekly
   });
 
-// FX_MONTHLY
-export const monthly = (params: IQuote) =>
+export const monthly = (params: IForexQuote) =>
   fetchQuote({
     ...params,
-    function: CurrencyFunctions.fxMonthly
+    function: ForexFunctions.monthly
   });
 
 export default {
