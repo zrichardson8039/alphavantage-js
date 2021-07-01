@@ -53,3 +53,15 @@ export enum TechnicalFunctions {
   htDCphase="HT_DCPHASE",
   htPhasor="HT_PHASOR",
 }
+
+export enum MaType {
+  sma,
+  ema,
+  wma,
+  dema,
+  tema,
+  trima,
+  t3ma,
+  kama,
+  mama,
+}

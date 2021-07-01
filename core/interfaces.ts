@@ -16,10 +16,3 @@ export interface IIntradayQuote extends IQuote {
   interval: Interval;
   slice?: Slice;
 }
-
-export interface ITechnical extends IRequest {
-  datatype?: DataType;
-  interval: Interval;
-  time_period?: number;
-  series_type?: SeriesType;
-}
