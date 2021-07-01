@@ -1,6 +1,18 @@
 import { fetchAPI } from "../core";
 import { TechnicalFunctions } from "./enums";
-import { IAdosc, IApo, IBBands, IMacd, IMacdExt, IMama, ISar, IStoch, IStochF, ITechnical, IUltosc } from "./interfaces";
+import { 
+  IAdosc,
+  IApo,
+  IBBands,
+  IMacd,
+  IMacdExt,
+  IMama,
+  ISar,
+  IStoch,
+  IStochF,
+  ITechnical,
+  IUltosc
+} from "./interfaces";
 
 export const sma = (params: ITechnical) =>
   fetchAPI({
@@ -158,6 +170,12 @@ export const roc = (params: ITechnical) =>
     function: TechnicalFunctions.roc
   });
 
+export const rocr = (params: ITechnical) =>
+  fetchAPI({
+    ...params,
+    function: TechnicalFunctions.rocr
+  });
+
 export const aroon = (params: ITechnical) =>
   fetchAPI({
     ...params,
@@ -313,3 +331,59 @@ export const htPhasor = (params: ITechnical) =>
     ...params,
     function: TechnicalFunctions.htPhasor
   });
+
+export default {
+  sma,
+  ema,
+  wma,
+  dema,
+  tema,
+  trima,
+  kama,
+  mama,
+  vwap,
+  t3,
+  macd,
+  macdext,
+  stoch,
+  stochf,
+  rsi,
+  stochrsi,
+  willr,
+  adx,
+  adxr,
+  apo,
+  ppo,
+  mom,
+  bop,
+  cci,
+  cmo,
+  roc,
+  rocr,
+  aroon,
+  aroonosc,
+  mfi,
+  trix,
+  ultosc,
+  dx,
+  minusDI,
+  plusDI,
+  minusDM,
+  plusDM,
+  bbands,
+  midpoint,
+  midprice,
+  sar,
+  trange,
+  atr,
+  natr,
+  ad,
+  adosc,
+  obv,
+  htTrendline,
+  htSine,
+  htTrendmode,
+  htDCperiod,
+  htDCphase,
+  htPhasor,
+};

@@ -11,3 +11,9 @@ export const fetchQuote = (params: IQuote) =>
 
 export const fetchIntradayQuote = (params: IIntradayQuote) =>
   fetchAPI<IIntradayQuote>(params);
+
+export default {
+  fetchAPI,
+  fetchQuote,
+  fetchIntradayQuote,
+};
