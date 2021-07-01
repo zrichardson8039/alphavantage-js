@@ -1,12 +1,12 @@
-import { CurrencyFunctions } from "../core/enums";
 import { fetchAPI, fetchIntradayQuote, fetchQuote } from "../core";
 import { ICurrencyExchangeRate, IIntradayQuote, IQuote } from "../core/interfaces";
+import { CurrencyFunctions } from "./enums";
 
 // CURRENCY_EXCHANGE_RATE
 export const exchangeRate = (params: ICurrencyExchangeRate) =>
   fetchAPI({
     ...params,
-    function: CurrencyFunctions.currencyExchangeRate
+    function: CurrencyFunctions.fxExchangeRate
   });
 
 // FX_INTRADAY
