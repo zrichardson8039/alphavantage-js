@@ -6,6 +6,7 @@
   "repository": "git@github.com:zrichardson8039/alphavantage-js.git",
   "author": "Zach Richardson <zachrichardson1114@gmail.com>",
   "license": "MIT",
+  "keywords": ["alphavantage", "vantage", "alpha", "alpha vantage", "stocks", "stock market", "api", "bitcoin", "crypto", "cryptocurrencies", "typescript"],
   "private": false,
   "dependencies": {
     "@types/node": "^15.6.0",
