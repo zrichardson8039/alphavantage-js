@@ -1,10 +1,10 @@
 {
-  "name": "alphavantage-js",
-  "version": "1.0.0",
-  "description": "A JavaScript SDK for the AlphaVantage API",
+  "name": "@zrichardson/alphavantage",
+  "version": "1.0.2",
+  "description": "A TypeScript SDK for the AlphaVantage API",
   "main": "index.ts",
   "repository": "git@github.com:zrichardson8039/alphavantage-js.git",
-  "author": "Zach Richardson <zach.richardson@willowtreeapps.com>",
+  "author": "Zach Richardson <zachrichardson1114@gmail.com>",
   "license": "MIT",
   "private": false,
   "dependencies": {
