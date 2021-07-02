@@ -1,12 +1,24 @@
 {
   "name": "@zrichardson/alphavantage",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A TypeScript SDK for the AlphaVantage API",
   "main": "index.ts",
   "repository": "git@github.com:zrichardson8039/alphavantage-js.git",
   "author": "Zach Richardson <zachrichardson1114@gmail.com>",
   "license": "MIT",
-  "keywords": ["alphavantage", "vantage", "alpha", "alpha vantage", "stocks", "stock market", "api", "bitcoin", "crypto", "cryptocurrencies", "typescript"],
+  "keywords": [
+    "alphavantage",
+    "vantage",
+    "alpha",
+    "alpha vantage",
+    "stocks",
+    "stock market",
+    "api",
+    "bitcoin",
+    "crypto",
+    "cryptocurrencies",
+    "typescript"
+  ],
   "private": false,
   "dependencies": {
     "@types/node": "^15.6.0",
