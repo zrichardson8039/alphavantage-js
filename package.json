@@ -1,6 +1,6 @@
 {
   "name": "@zrichardson/alphavantage",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A TypeScript SDK for the AlphaVantage API",
   "main": "index.ts",
   "repository": "git@github.com:zrichardson8039/alphavantage-js.git",
