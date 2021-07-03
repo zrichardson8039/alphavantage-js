@@ -1,11 +1,4 @@
-import cryptocurrencies from './cryptocurrencies';
-import forex from './forex';
-import fundamentals from './fundamentals';
-import stocks from './stocks';
-import technicals from './technicals';
-
-
-export class AlphaVantage {
+export default class AlphaVantage {
   private apikey;
 
   constructor(apikey) {
@@ -19,11 +12,3 @@ export class AlphaVantage {
     }));
   }
 }
-
-export default {
-  cryptocurrencies,
-  forex,
-  fundamentals,
-  stocks,
-  technicals,
-};
